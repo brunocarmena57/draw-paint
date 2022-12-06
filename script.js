@@ -16,14 +16,12 @@ let y
 
 canvas.addEventListener('mousedown', (e) => {
     isPressed = true
-
     x = e.offsetX
     y = e.offsetY
 })
 
 document.addEventListener('mouseup', (e) => {
     isPressed = false
-
     x = undefined
     y = undefined
 })
@@ -35,7 +33,6 @@ canvas.addEventListener('mousemove', (e) => {
 
         drawCircle(x2, y2)
         drawLine(x, y, x2, y2)
-
         x = x2
         y = y2
     }
@@ -67,7 +64,6 @@ increaseBtn.addEventListener('click', () => {
     if(size > 50) {
         size = 50
     }
-
     updateSizeOnScreen()
 })
 
@@ -77,10 +73,8 @@ decreaseBtn.addEventListener('click', () => {
     if(size < 5) {
         size = 5
     }
-
     updateSizeOnScreen()
 })
 
 colorEl.addEventListener('change', (e) => color = e.target.value)
-
 clearEl.addEventListener('click', () => ctx.clearRect(0,0, canvas.width, canvas.height))
